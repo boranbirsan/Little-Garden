@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Outside.unity
     guid: 43b8ce4083e8d824d93b816c4d5769c2
+  - enabled: 1
+    path: Assets/Scenes/Tournament Hall.unity
+    guid: 716f47cb1b3a82c49a6a8ce23cc9b2fe
   m_configObjects: {}

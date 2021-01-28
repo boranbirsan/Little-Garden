@@ -43,11 +43,9 @@ public class GardenlingAI : MonoBehaviour
     void FixedUpdate()
     {
         acceleration = Vector2.zero;
-        //Debug.Log(elapsedTime);
 
         if (elapsedTime < moveTime && moving)
         {
-            //Debug.Log("Moving");
             velocity = view.FindPath() * speed;
 
             Vector2 ranchCenterOffset = (Ranch.transform.position - transform.position);
@@ -75,15 +73,11 @@ public class GardenlingAI : MonoBehaviour
             direction.y = Random.Range(-3f, 3f);
             moveTime = Random.Range(2f, 4f);
 
-            //Debug.Log(direction.normalized);
-
             velocity = direction.normalized * speed;
 
             view.ChangeDirection(velocity);
             elapsedTime = 0f;
         }
-
-        //Debug.DrawLine(transform.position, centerForce, Color.white);
 
         velocity += acceleration * Time.deltaTime;
 
